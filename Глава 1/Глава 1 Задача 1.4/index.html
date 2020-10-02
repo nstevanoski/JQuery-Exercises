@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $(".prvdiv").on("mousemove", OnMouseOver);
+            $(".vtordiv").on("mousemove", OnMouseOver2);
+        });
+
+        function OnMouseOver(evt) {
+            $(".prvdiv").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+        }
+
+        function OnMouseOver2(evt) {
+            $(".vtordiv").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="prvdiv">
+
+    </div>
+    <div class="vtordiv">
+
+    </div>
+
+</body>
+
+</html>

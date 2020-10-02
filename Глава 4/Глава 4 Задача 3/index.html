@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("div#element a").attr("href", "index.html");
+            $("div#element a").attr("target", "_blank");
+            var elements = $("div#element");
+            elements.css("border-bottom", "1px solid black");
+            elements.last().css("border", "none");
+            if (elements.hasClass("blue")) {
+                elements.attr("name", "testatr");
+            }
+            if (elements.hasClass("red")) {
+                elements.removeClass;
+            }
+
+            $(".aside-2 ul").addClass("info-links");
+
+            $(".info-links li a").css("text-decoration", "underline");
+            $(".info-links li a").css("color", "red");
+
+            var links = $("li a");
+            console.log(links);
+            $('li').click(function() {
+                $(this, "a").text("Линкот е кликнат");
+                $(this, "a").css("color", "green");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <main>
+
+        </main>
+        <aside class="aside-1">
+            <div id="element" class="blue">
+                <a>
+                    <p>Ова е слика 1</p>
+                    <img src="images/1.jpg">
+                </a>
+            </div>
+            <div id="element">
+                <a>
+                    <p>Ова е слика 2</p>
+                    <img src="images/2.jpg">
+                </a>
+            </div>
+            <div id="element" class="red">
+                <a>
+                    <p>Ова е слика 3</p>
+                    <img src="images/3.jpg">
+                </a>
+            </div>
+            <div id="element" class="blue">
+                <a>
+                    <p>Ова е слика 4</p>
+                    <img src="images/4.jpg">
+                </a>
+            </div>
+        </aside>
+        <aside class="aside-2">
+            <ul>
+                <li><a>Линк 1</a></li>
+                <li><a>Линк 2</a></li>
+                <li><a>Линк 3</a></li>
+                <li><a>Линк 4</a></li>
+                <li><a>Линк 5</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+
+</html>

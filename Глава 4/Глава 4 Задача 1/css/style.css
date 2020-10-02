@@ -1,0 +1,16 @@
+nav a {
+    text-decoration: none;
+    background: #ba0000;
+    color: white;
+    padding: 1em;
+}
+
+nav {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.highlighted {
+    background: #9d0000;
+    color: lightgray;
+}

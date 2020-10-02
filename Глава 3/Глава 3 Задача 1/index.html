@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Никола Стеваноски | Почетна</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            var naslov = $("title").text();
+            var h1 = $(".prvh1");
+            h1.text(naslov);
+
+            $("h6,h5,h4,h3,h2,h1").css("text-transform", "uppercase");
+
+            var prvasekcija = $("section.prvasekcija p a").addClass("red-link");
+            var vtorasekcija = $("section.vtorasekcija p a").addClass("green-link");
+
+            var zemilinkprvasekcija = $("section.prvasekcija p a");
+            var zemilinkvtorasekcija = $("section.vtorasekcija p a");
+
+            if (zemilinkprvasekcija.hasClass("red-link")) {
+                zemilinkprvasekcija.css("border", "1px solid red");
+            }
+            if (zemilinkvtorasekcija.hasClass("green-link")) {
+                zemilinkvtorasekcija.css("border", "1px solid green");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <a href="index.html">
+        <h1 class="prvh1"></h1>
+    </a>
+    <h2>Ова е h2</h2>
+    <h3>Ова е h3</h3>
+    <h4>Ова е h4</h4>
+    <h5>Ова е h5</h5>
+    <h6>Ова е h6</h6>
+
+    <section class="prvasekcija">
+        <p>Јас сум <a href="index.html">Никола Стеваноски</a></p>
+        <p>Јас сум Никола Стеваноски</p>
+        <p>Јас сум <a href="index.html">Никола Стеваноски</a></p>
+    </section>
+    <section class="vtorasekcija">
+        <p>Јас сум <a href="index.html">Филип Кривашија</a></p>
+        <p>Јас сум <a href="index.html">Никола Стеваноски</a></p>
+        <p>Јас сум Никола Стеваноски</p>
+    </section>
+</body>
+
+</html>

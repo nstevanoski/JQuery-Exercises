@@ -1,0 +1,12 @@
+.prvdiv {
+    padding: 6em;
+    background: #cacaca;
+    border: 1px solid black;
+}
+
+.vtordiv {
+    padding: 6em;
+    background: #cacaca;
+    border: 1px solid black;
+    margin-top: 1em;
+}

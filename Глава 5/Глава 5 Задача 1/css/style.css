@@ -1,0 +1,33 @@
+.box {
+    /* padding: 2em; */
+    background: #fcfcfc;
+    color: black;
+    max-width: 41%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid lightgray;
+    text-align: center;
+    padding: 1em;
+}
+
+.box h2 {
+    background: #002797;
+    /* padding: 0; */
+    margin-top: 0;
+    color: white;
+    padding: 1em;
+}
+
+.box2 {
+    /* padding: 2em; */
+    background: #fcfcfc;
+    color: black;
+    max-width: 41%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid lightgray;
+    text-align: center;
+    padding: 1em;
+}

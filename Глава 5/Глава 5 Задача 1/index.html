@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $(".box2").hide();
+            $(".presmetaj").click(function() {
+                var valuekg = $('input[name ="tezinakg"]').val();
+                var visinam = $('input[name ="visinam"]').val();
+                var soberi = parseInt(valuekg) / (parseInt(visinam) * parseInt(visinam)) * 10000;
+                var sobereno = soberi.toFixed(2);
+                var pol = $(".pol").val();
+                $(".tezina").text(valuekg);
+                $(".visina").text(visinam);
+                $(".box2 .pol").text(pol);
+                $(".sobereno").text(sobereno);
+
+                //MASKO
+                if (sobereno <= 18.5 && pol == "Машко") {
+                    $(".test2").text("Помала телесна тежина");
+                    $("img").attr("src", "images/men/slaba.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Помала телесна тежина, следете го линкот да ја зголемите тежината на здрав начин.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+                } else if (sobereno > 18.5 && sobereno < 24.9 && pol == "Машко") {
+                    $(".test2").text("Нормална телесна тежина");
+                    $("img").attr("src", "images/men/normalna.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Нормална, следете го линкот да ја одржите тежината.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                } else if (sobereno > 25.0 && sobereno < 29.9 && pol == "Машко") {
+                    $(".test2").text("Прекумерна телесна тежина");
+                    $("img").attr("src", "images/men/prekumerna.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Прекумерна, следете го линкот да намалите на тежина.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                } else if (sobereno > 30.0 && pol == "Машко") {
+                    $(".test2").text("Преголема телесна тежина");
+                    $("img").attr("src", "images/men/pregolema.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Преголема, следете го линкот да намалите на тежина.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                }
+
+
+                //ZENSKO
+                if (sobereno <= 18.5 && pol == "Женско") {
+                    $(".test2").text("Помала телесна тежина");
+                    $("img").attr("src", "images/women/slaba.png")
+                    $("img").animate({
+                        width: "6%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Помала телесна тежина, следете го линкот да ја зголемите тежината на здрав начин.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                } else if (sobereno > 18.5 && sobereno < 24.9 && pol == "Женско") {
+                    $(".test2").text("Нормална телесна тежина");
+                    $("img").attr("src", "images/women/normalna.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Нормална, следете го линкот да ја одржите тежината.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                } else if (sobereno > 25.0 && sobereno < 29.9 && pol == "Женско") {
+                    $(".test2").text("Прекумерна телесна тежина");
+                    $("img").attr("src", "images/women/prekumerna.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Прекумерна, следете го линкот да намалите на тежина.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                } else if (sobereno > 30.0 && pol == "Женско") {
+                    $(".test2").text("Преголема телесна тежина");
+                    $("img").attr("src", "images/women/pregolema.png")
+                    $("img").animate({
+                        width: "10%",
+                        marginLeft: "0.6in",
+                    }, 1500);
+                    setTimeout(function() {
+                        $("img").hide("slow", function() {
+                            $(".posleslika").text("Преголема, следете го линкот да намалите на тежина.");
+                        });
+                    }, 5000);
+                    $(".box").hide("slow");
+                    $(".box2").show("fast");
+                    $(".box2 a").attr("href", "index.html");
+
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>BMI Калкулатор</h2>
+        <select class="pol">
+              <option selection disabled>Избери</option>
+                <option value="Машко">Машко</option>
+                <option value="Женско">Женско</option>
+            </select><br>
+        <label for="visinam">Внесете висина (m):</label><br>
+        <input type="text" name="visinam"><br><br>
+        <label for="tezinakg">Внесете тежина (кг):</label><br>
+        <input type="text" name="tezinakg"><br>
+
+        <button class="presmetaj">ПРЕСМЕТАЈ</button>
+    </div>
+    <div class="box2">
+        <p>Внесени информации:</p>
+        <p>Висина: <span class="visina"></span></p>
+        <p>Тежина: <span class="tezina"></span></p>
+        <p>Пол: <span class="pol"></span></p>
+        <p>Вашиот БМИ е <span class="sobereno"></span>, што покажува дека вашата тежина е во категоријата <span class="test2"></span> за возрасни со ваша висина.</p>
+        <img>
+        <a>
+            <p class="posleslika"></p>
+        </a>
+        <a href="index.html">РЕСЕТИРАЈ</a>
+    </div>
+</body>
+
+</html>

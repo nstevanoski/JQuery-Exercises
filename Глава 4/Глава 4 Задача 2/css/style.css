@@ -1,0 +1,23 @@
+div img {
+    max-width: 16%;
+}
+
+.buttonmorehover {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 1em;
+}
+
+.buttonmore {
+    color: white;
+    background-color: orangered;
+    border: none;
+    border-radius: 1em;
+}
+
+.highlighted {
+    background: #9d0000;
+    color: lightgray;
+    border: none
+}

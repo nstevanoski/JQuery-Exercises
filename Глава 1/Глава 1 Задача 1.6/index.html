@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $(".prvdiv").on("mousemove", OnMouseOver);
+            $(".vtordiv").on("mousemove", OnMouseOver2);
+            $(".tret").on("mousemove", OnMouseOver3);
+            $(".cetvrt").on("mousemove", OnMouseOver4);
+        });
+
+        function OnMouseOver() {
+            $.ajax("1div.txt", {
+                success: setContent,
+                type: "GET",
+                dataType: "text"
+            });
+        }
+
+        function OnMouseOver2() {
+            $.ajax("2div.txt", {
+                success: setContent2,
+                type: "GET",
+                dataType: "text"
+            });
+        }
+
+        function OnMouseOver3() {
+            $.ajax("3div.txt", {
+                success: setContent3,
+                type: "GET",
+                dataType: "text"
+            });
+        }
+
+        function OnMouseOver4() {
+            $.ajax("4div.txt", {
+                success: setContent4,
+                type: "GET",
+                dataType: "text"
+            });
+        }
+
+        function setContent(data, status, jqxhr) {
+            $(".prvdiv").text(data);
+        }
+
+        function setContent2(data, status, jqxhr) {
+            $(".vtordiv").text(data);
+        }
+
+        function setContent3(data, status, jqxhr) {
+            $(".tret").text(data);
+        }
+
+        function setContent4(data, status, jqxhr) {
+            $(".cetvrt").text(data);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="prvdiv">
+
+    </div>
+    <div class="vtordiv">
+
+    </div>
+    <div class="tret">
+
+    </div>
+    <div class="cetvrt">
+
+    </div>
+
+</body>
+
+</html>

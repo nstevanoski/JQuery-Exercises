@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("button").click(function() {
+                $.getJSON("test.json", function(result) {
+                    $.each(result, function(i, field) {
+                        $("div").append(field + " ");
+                    });
+                });
+            });
+
+            function Skrolanje() {
+                $.getJSON("naredpod.json", function(result) {
+                    $.each(result, function(i, field) {
+                        $("div").append(field + " ");
+                    });
+                });
+            }
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    Skrolanje();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="61e78b08a8dd18779132812218a9f2a8.jpg">
+    <button>Get JSON data</button>
+    <div></div>
+</body>
+
+</html>

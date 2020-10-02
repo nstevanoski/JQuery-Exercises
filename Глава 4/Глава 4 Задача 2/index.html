@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $('div > img').attr('alt', 'Google Images');
+            $('div > img').addClass("offers");
+            $("#offers-wrap").append($(".box"));
+            $("#offers-wrap").css("margin", "1em");
+            $("#offers-wrap").css("padding", "1em");
+            $("#offers-wrap").css("position", "relative");
+
+            $(".buttonmore").mouseenter(function() {
+                $(this).toggleClass("buttonmorehover");
+                $(this).removeClass("buttonmore");
+            }).mouseleave(function() {
+                $(this).removeClass("buttonmorehover");
+                $(this).toggleClass("buttonmore");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <section>
+        <div id="offers-wrap">
+            <div class="box">
+                <h4>Градина</h4>
+                <p>Прекрасна градина 1</p>
+                <img src="images/1.jpg">
+                <button class="buttonmore">MORE</button>
+            </div>
+            <div class="box">
+                <h4>Градина 2</h4>
+                <p>Прекрасна градина 2</p>
+                <img src="images/2.jpg">
+                <button class="buttonmore">MORE</button>
+
+            </div>
+            <div class="box">
+                <h4>Градина 3</h4>
+                <p>Прекрасна градина 3</p>
+                <img src="images/3.jpg">
+                <button class="buttonmore">MORE</button>
+
+            </div>
+            <div class="box">
+                <h4>Градина 4</h4>
+                <p>Прекрасна градина 4</p>
+                <img src="images/4.jpg">
+                <button class="buttonmore">MORE</button>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

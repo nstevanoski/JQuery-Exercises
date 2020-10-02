@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POCETNA</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $(".skrijtag").click(function() {
+                $("p").hide();
+                $(".mesto").show();
+                $("#stoucam").show();
+            });
+            $(".skrijklasa").click(function() {
+                $("p").show();
+                $(".mesto").hide();
+                $("#stoucam").show();
+            });
+            $(".skrijid").click(function() {
+                $("p").show();
+                $(".mesto").show();
+                $("#stoucam").hide();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button class="skrijtag">СКРИЈ ТАГ ЕЛЕМЕНТ</button>
+    <button class="skrijklasa">СКРИЈ КЛАСА ЕЛЕМЕНТ</button>
+    <button class="skrijid">СКРИЈ ИД ЕЛЕМЕНТ</button>
+
+    <p>Јас сум Никола Стеваноски</p>
+
+    <p class="mesto">Јас сум од Росоман</p>
+
+    <p id="stoucam">И учам JQUERY</p>
+
+</body>
+
+</html>
